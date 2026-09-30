@@ -15,7 +15,7 @@ export interface Project {
   description: string;
   technologies: string[];
   status: 'coming-soon' | 'published';
-  visual: 'data' | 'development' | 'ai' | 'security';
+  visual: 'data' | 'development' | 'ai' | 'automation' | 'security';
   image?: string;
   imageAlt?: string;
   problem?: string;
@@ -25,8 +25,58 @@ export interface Project {
   demo?: string;
   caseStudy?: string;
 }
-// Fichas de ejemplo identificadas como próximas. Sustituir únicamente por proyectos reales.
+// Trabajos documentados en el portafolio anterior. Ver CONTENT_SOURCES.md.
+// No asociar repositorios, resultados o tecnologías que no estén documentados.
 export const projects: Project[] = [
+  {
+    id: 'flechisa-rpa',
+    name: 'Automatización de procesos · FLECHISA',
+    category: ['Automation'],
+    description:
+      'Participación en la creación de cinco robots de automatización para una empresa de distribución y paquetería.',
+    technologies: ['RPA', 'Automatización de procesos'],
+    status: 'published',
+    visual: 'automation',
+    solution:
+      'Colaboración en el desarrollo de robots para automatizar actividades de FLECHISA.',
+    result: 'Contribución a la creación de cinco robots de automatización.',
+  },
+  {
+    id: 'thb-web',
+    name: 'Desarrollo web · THB',
+    category: ['Development'],
+    description:
+      'Colaboración con SAO en la creación del sitio web de THB, dentro del sector asegurador.',
+    technologies: ['Desarrollo web', 'Sector asegurador'],
+    status: 'published',
+    visual: 'development',
+    solution: 'Participación en el desarrollo del sitio de THB junto con SAO.',
+  },
+  {
+    id: 'recetario-api',
+    name: 'Recetario con integración de APIs',
+    category: ['Development'],
+    description:
+      'Aplicación web de recetas que integra APIs para consultar y mostrar información.',
+    technologies: ['APIs', 'Desarrollo web'],
+    status: 'published',
+    visual: 'development',
+    solution: 'Desarrollo de un recetario web con integración de APIs.',
+    demo: 'https://recetas-23emd.vercel.app/index.html',
+  },
+  {
+    id: 'login-demo',
+    name: 'Login y base de datos temporal',
+    category: ['Development'],
+    description:
+      'Proyecto web de demostración con inicio de sesión y una base de datos temporal.',
+    technologies: ['Login', 'Base de datos temporal', 'Desarrollo web'],
+    status: 'published',
+    visual: 'development',
+    solution:
+      'Creación de una página con login conectado a una base de datos temporal.',
+    demo: 'https://recetas-login.vercel.app/login.html',
+  },
   {
     id: 'data-placeholder',
     name: 'Proyecto próximamente',
@@ -36,16 +86,6 @@ export const projects: Project[] = [
     technologies: ['Power BI', 'Python', 'SQL Server'],
     status: 'coming-soon',
     visual: 'data',
-  },
-  {
-    id: 'development-placeholder',
-    name: 'Proyecto próximamente',
-    category: ['Development'],
-    description:
-      'Espacio para una próxima aplicación web, solución de software o integración de APIs.',
-    technologies: ['C#', 'JavaScript', 'REST APIs'],
-    status: 'coming-soon',
-    visual: 'development',
   },
   {
     id: 'ai-placeholder',
@@ -65,4 +105,12 @@ export interface FeaturedRepository {
   language?: string;
 }
 // Opcional: agrega repositorios reales manualmente; no requiere token ni GitHub API.
-export const featuredRepositories: FeaturedRepository[] = [];
+export const featuredRepositories: FeaturedRepository[] = [
+  {
+    name: 'PortafolioXajid',
+    description:
+      'Versión anterior de mi portafolio personal, construida con HTML, CSS y JavaScript.',
+    url: 'https://github.com/XajidMtz/PortafolioXajid',
+    language: 'HTML / CSS / JavaScript',
+  },
+];

@@ -20,7 +20,9 @@ export function ProjectVisual({
             ? 'BUILD / CONNECT'
             : visual === 'security'
               ? 'SECURITY / NETWORKS'
-              : 'INTELLIGENCE / WORKFLOWS'}
+              : visual === 'automation'
+                ? 'PROCESS / AUTOMATION'
+                : 'INTELLIGENCE / WORKFLOWS'}
       </span>
       {visual === 'data' ? (
         <div className="concept-chart">
@@ -70,7 +72,13 @@ export function ProjectVisual({
             ) : (
               <Cpu size={26} />
             )}
-            <small>{visual === 'security' ? 'Seguridad' : 'Agente IA'}</small>
+            <small>
+              {visual === 'security'
+                ? 'Seguridad'
+                : visual === 'automation'
+                  ? 'Robot RPA'
+                  : 'Agente IA'}
+            </small>
           </span>
           <i />
           <span>

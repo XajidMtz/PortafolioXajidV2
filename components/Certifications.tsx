@@ -22,7 +22,7 @@ export function Certifications() {
             )}
             {certificate.issuer && <p>{certificate.issuer}</p>}
           </div>
-          <span>{certificate.year}</span>
+          {certificate.year && <span>{certificate.year}</span>}
         </div>
       ))}
     </div>

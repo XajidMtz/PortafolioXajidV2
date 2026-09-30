@@ -41,7 +41,7 @@ createServer(async (req, res) => {
       ...(path.extname(target) === '.pdf'
         ? {
             'Content-Disposition':
-              'attachment; filename="CV_Xajid_Martinez.pdf"',
+              `attachment; filename="${path.basename(target)}"`,
           }
         : {}),
     });

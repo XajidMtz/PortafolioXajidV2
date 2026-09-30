@@ -5,6 +5,7 @@ import { profile } from '@/data/profile';
 export interface LocalAssets {
   hasPhoto: boolean;
   hasResume: boolean;
+  hasResumeEn: boolean;
   hasOptimizedPhoto: boolean;
 }
 
@@ -14,6 +15,7 @@ export function getLocalAssets(): LocalAssets {
   return {
     hasPhoto: publicFileExists(profile.profileImage),
     hasResume: publicFileExists(profile.resumeUrl),
+    hasResumeEn: publicFileExists(profile.resumeUrlEn),
     hasOptimizedPhoto: publicFileExists('/profile-800.webp'),
   };
 }

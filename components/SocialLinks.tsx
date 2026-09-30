@@ -1,4 +1,4 @@
-import { Mail } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
 import { Github, Linkedin } from '@/components/BrandIcons';
 import { profile } from '@/data/profile';
 
@@ -43,6 +43,16 @@ export function SocialLinks({ labels = false }: { labels?: boolean }) {
           )}
         </button>
       )}
+      <a
+        className={className}
+        href={profile.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={'Abrir WhatsApp de ' + profile.shortName + ' (nueva pestaña)'}
+      >
+        <MessageCircle size={19} />
+        {labels && 'WhatsApp'}
+      </a>
       <a
         className={className}
         href={`mailto:${profile.email}`}

@@ -20,7 +20,7 @@ export function Experience() {
       <div className="timeline">
         {experience.map((item) => (
           <article
-            className={`experience-item ${item.featured ? 'experience-featured' : ''}`}
+            className={`experience-item ${item.featured ? 'experience-featured' : ''} ${item.current ? 'experience-current' : ''}`}
             key={item.id}
           >
             <div className="experience-date">
@@ -37,9 +37,11 @@ export function Experience() {
               )}
             </div>
             <div className="experience-card">
-              {item.featured && (
+              {(item.current || item.featured) && (
                 <p className="experience-focus">
-                  DATA ANALYTICS + SOFTWARE + AUTOMATION
+                  {item.current
+                    ? 'AGENTES DE IA A MEDIDA · PARA CADA CLIENTE'
+                    : 'ANÁLISIS DE DATOS · CUIDADO DE LA INFORMACIÓN'}
                 </p>
               )}
               <h3>{item.title}</h3>

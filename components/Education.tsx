@@ -24,6 +24,8 @@ export function Education() {
             <div>
               <p className="education-date">{item.period}</p>
               <h3>{item.title}</h3>
+              {item.institution && <p>{item.institution}</p>}
+              {item.specialization && <p>{item.specialization}</p>}
               {item.status && (
                 <span className="degree-status">
                   <BadgeCheck size={15} />

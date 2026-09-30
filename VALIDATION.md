@@ -17,7 +17,7 @@ Validación realizada el 6 de septiembre de 2026 (CDMX).
 - Filtros probados: Data, Development, AI y Automation muestran su ficha; Cybersecurity muestra el estado vacío; Todos restaura las tres fichas. Las fichas explican que todavía no representan proyectos realizados.
 - Indicador de sección activa verificado en la versión de producción.
 - GitHub enlaza a `https://github.com/XajidMtz`, cuyo perfil fue verificado. Hay accesos en portada, sección GitHub, contacto y footer. No se requiere la API.
-- Los enlaces de correo usan `mailto:Xajidmartinez@gmail.com`. No se envió ningún mensaje.
+- Los enlaces de correo usan `mailto:xajidcash@gmail.com`. No se envió ningún mensaje.
 - LinkedIn vacío: tres accesos deshabilitados con nombre accesible y estado próximo, sin URLs ficticias.
 - Fotografía ausente: monograma visible, sin petición a una imagen inexistente.
 - Prueba temporal de fotografía: una imagen de color plano fue convertida a WebP, cargada correctamente y mostrada con `object-fit: cover`.

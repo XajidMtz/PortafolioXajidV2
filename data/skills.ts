@@ -8,10 +8,10 @@ export const expertise: {
 }[] = [
   {
     id: 'data',
-    title: 'Data Analytics',
-    subtitle: 'INFORMACIÓN QUE ORIENTA DECISIONES',
+    title: 'Analista de datos',
+    subtitle: 'INFORMACIÓN PARA DECIDIR',
     description:
-      'Integro y analizo información para convertirla en dashboards, reportes e insights útiles. Trabajo con consultas SQL, procesos ETL y visualización de datos.',
+      'Analizo e integro datos para convertirlos en dashboards, reportes e información útil para decidir. Trabajo con SQL, procesos ETL y visualización, cuidando la calidad de la información.',
     tags: ['SQL', 'Python', 'Power BI', 'ETL'],
   },
   {
@@ -24,25 +24,25 @@ export const expertise: {
   },
   {
     id: 'ai',
-    title: 'AI & Automation',
-    subtitle: 'MENOS TAREAS MANUALES. MÁS VALOR.',
+    title: 'Agentes de IA a medida',
+    subtitle: 'DISEÑADOS PARA CADA CLIENTE',
     description:
-      'Diseño agentes con OpenAI API e integro IA en sistemas existentes. Conecto APIs y bases de datos SQL para consultar información y automatizar actividades empresariales.',
+      'Creo agentes de IA a partir de las necesidades, objetivos y procesos de cada cliente. Integro OpenAI API, otros servicios y bases de datos SQL para consultar información y automatizar tareas.',
     tags: ['OpenAI API', 'AI Agents', 'RPA', 'Intelligent Workflows'],
   },
   {
     id: 'security',
-    title: 'Cybersecurity',
-    subtitle: 'UNA BASE EN REDES Y SEGURIDAD',
+    title: 'Protección de la información',
+    subtitle: 'CUIDADO DE LOS DATOS EN CADA SOLUCIÓN',
     description:
-      'Mi formación como Ingeniero en Redes y Ciberseguridad aporta una perspectiva de seguridad e infraestructura a cada solución, con conocimientos en pentesting y hacking ético.',
+      'Mi formación como Ingeniero en Redes y Ciberseguridad guía el manejo responsable, la protección y el cuidado de la información en las soluciones que construyo.',
     tags: ['Linux', 'Windows Server', 'Redes', 'Seguridad informática'],
   },
 ];
 export const skillGroups = [
   {
     id: 'data',
-    title: 'Data Analytics',
+    title: 'Análisis de datos',
     skills: [
       'SQL',
       'Power BI',
@@ -58,16 +58,18 @@ export const skillGroups = [
   },
   {
     id: 'ai',
-    title: 'Artificial Intelligence & Automation',
+    title: 'Agentes de IA y automatización',
     skills: [
       'OpenAI API',
       'AI Agents',
+      'Diseño de agentes a medida',
       'AI Integration',
       'AI Automation',
       'API Integration',
       'SQL Integration',
       'Process Automation',
       'RPA',
+      'UiPath',
       'Intelligent Workflows',
     ],
   },
@@ -80,6 +82,8 @@ export const skillGroups = [
       'JavaScript',
       'Java',
       'Angular',
+      'Spring Data',
+      'MVC',
       'REST APIs',
       'WebServices',
       'Git',
@@ -94,7 +98,7 @@ export const skillGroups = [
   },
   {
     id: 'security',
-    title: 'Cybersecurity & Infrastructure',
+    title: 'Ciberseguridad y protección de información',
     skills: [
       'Linux',
       'Windows Server',
@@ -103,6 +107,7 @@ export const skillGroups = [
       'Pentesting',
       'Hacking Ético',
       'Ciberseguridad',
+      'Protección de información',
     ],
   },
 ] as const;

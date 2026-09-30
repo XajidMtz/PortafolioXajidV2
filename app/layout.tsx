@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
   title:
-    'Xajid Martínez | Data Analyst · Software Developer · AI Automation · Cybersecurity',
+    'Xajid Martínez | Analista de datos · Agentes de IA a medida · Ciberseguridad',
   description:
-    'Ingeniero en Redes y Ciberseguridad especializado en análisis de datos, desarrollo de software, Inteligencia Artificial, automatización y soluciones tecnológicas.',
+    'Analista de datos e Ingeniero en Redes y Ciberseguridad. Desarrollo agentes de IA según las necesidades de cada cliente y cuido la información en cada solución.',
   authors: [{ name: profile.name }],
   alternates: { canonical: '/' },
   openGraph: {
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     locale: 'es_MX',
     url: '/',
     siteName: 'Xajid Martínez · Portafolio',
-    title: 'Xajid Martínez | Datos, desarrollo e Inteligencia Artificial',
+    title: 'Xajid Martínez | Datos, agentes de IA y protección de información',
     description: profile.headline,
   },
   twitter: {
     card: 'summary',
-    title: 'Xajid Martínez | Data Analyst · Software Developer',
+    title: 'Xajid Martínez | Analista de datos · Agentes de IA',
     description: profile.headline,
   },
   icons: { icon: '/favicon.svg' },

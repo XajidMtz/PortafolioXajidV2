@@ -46,15 +46,21 @@ export function Expertise() {
                   <span key={tag}>{tag}</span>
                 ))}
               </div>
+              {area.id === 'data' && (
+                <div className="data-note">
+                  Datos claros para decisiones responsables
+                  <ArrowUpRight size={15} />
+                </div>
+              )}
               {area.id === 'ai' && (
                 <div className="ai-note">
-                  AI Engineering · Integración · Automatización{' '}
+                  Agentes diseñados para cada cliente{' '}
                   <ArrowUpRight size={15} />
                 </div>
               )}
               {area.id === 'security' && (
-                <div className="training-note">
-                  Formación académica y especialización técnica
+                <div className="security-note">
+                  Protección y cuidado de la información
                 </div>
               )}
             </article>

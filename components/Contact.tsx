@@ -1,4 +1,4 @@
-import { ArrowUpRight, Globe2, Mail, MapPin } from 'lucide-react';
+import { ArrowUpRight, Globe2, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 import { profile } from '@/data/profile';
 import type { LocalAssets } from '@/lib/assets';
 import { ResumeLink } from './ResumeLink';
@@ -29,6 +29,10 @@ export function Contact({ assets }: { assets: LocalAssets }) {
               {profile.email}
               <ArrowUpRight size={25} />
             </a>
+            <a className="contact-phone" href={profile.phoneHref}>
+              <Phone size={20} />
+              {profile.phone}
+            </a>
             <div className="contact-actions">
               <a
                 className="button button-primary"
@@ -37,7 +41,25 @@ export function Contact({ assets }: { assets: LocalAssets }) {
                 <Mail size={17} />
                 Enviar correo
               </a>
-              <ResumeLink available={assets.hasResume} />
+              <a
+                className="button button-secondary"
+                href={profile.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={17} />
+                WhatsApp
+              </a>
+              {profile.linkedin && (
+                <a
+                  className="button button-secondary"
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn <ArrowUpRight size={17} />
+                </a>
+              )}
             </div>
           </div>
           <aside className="availability-card">
@@ -61,6 +83,24 @@ export function Contact({ assets }: { assets: LocalAssets }) {
               <SocialLinks labels />
             </div>
           </aside>
+        </div>
+        <div className="resume-downloads" aria-labelledby="resume-downloads-title">
+          <div>
+            <span className="mono-label">CURRÍCULUM</span>
+            <h3 id="resume-downloads-title">Descarga mi CV</h3>
+            <p>Elige la versión en español o en inglés.</p>
+          </div>
+          <div className="resume-download-options">
+            <ResumeLink
+              available={assets.hasResume}
+              label="Descargar en español"
+            />
+            <ResumeLink
+              available={assets.hasResumeEn}
+              language="en"
+              label="Download in English"
+            />
+          </div>
         </div>
       </div>
     </section>

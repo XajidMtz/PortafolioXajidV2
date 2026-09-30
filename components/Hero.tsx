@@ -97,7 +97,7 @@ export function Hero({ assets }: { assets: LocalAssets }) {
           </div>
           <div className="floating-tag ai-tag">
             <Cpu size={20} />
-            <span>AI + AUTOMATION</span>
+            <span>AGENTES A MEDIDA</span>
             <span className="status-dot" />
           </div>
           <div className="visual-caption">
@@ -117,7 +117,7 @@ export function Hero({ assets }: { assets: LocalAssets }) {
       <div className="discipline-strip" aria-label="Áreas de trabajo">
         <span>
           <ChartNoAxesCombined />
-          Data Analytics
+          Análisis de datos
         </span>
         <span>
           <Braces />
@@ -125,11 +125,11 @@ export function Hero({ assets }: { assets: LocalAssets }) {
         </span>
         <span>
           <Cpu />
-          AI & Automation
+          Agentes de IA
         </span>
         <span>
           <ShieldCheck />
-          Cybersecurity
+          Protección de datos
         </span>
       </div>
     </section>

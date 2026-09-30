@@ -59,7 +59,10 @@ function ProjectCard({ project }: { project: Project }) {
         <Dialog>
           <DialogTrigger className="project-detail-link">
             Ver ficha <ArrowUpRight size={17} />
-            <span className="sr-only"> de {project.category.join(' y ')}</span>
+            <span className="sr-only">
+              {' '}
+              de {project.name} · {project.category.join(' y ')}
+            </span>
           </DialogTrigger>
           <DialogContent className="project-dialog" showCloseButton={false}>
             <DialogClose
@@ -85,7 +88,7 @@ function ProjectCard({ project }: { project: Project }) {
               ].map(({ title, value }) => (
                 <div key={title}>
                   <h4>{title}</h4>
-                  <p>{value || 'Por documentar al publicar el proyecto.'}</p>
+                  <p>{value || 'Información por documentar.'}</p>
                 </div>
               ))}
             </div>
@@ -114,7 +117,11 @@ function ProjectCard({ project }: { project: Project }) {
                 ) : (
                   <span key={label} className="pending-project-link">
                     {label}
-                    <small>Próximamente</small>
+                    <small>
+                      {project.status === 'coming-soon'
+                        ? 'Próximamente'
+                        : 'Sin enlace público'}
+                    </small>
                   </span>
                 ),
               )}

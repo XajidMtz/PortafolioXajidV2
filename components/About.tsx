@@ -30,17 +30,21 @@ export function About() {
             <strong>
               análisis de datos, el desarrollo de software y la automatización
               de procesos.
-            </strong>
+            </strong>{' '}
+            Como analista de datos, convierto información en resultados claros
+            para apoyar decisiones.
           </p>
           <p>
-            Trabajo con bases de datos SQL, aplicaciones, APIs y agentes de
-            Inteligencia Artificial para convertir información en reportes
-            útiles, conectar sistemas y reducir tareas manuales.
+            Creo <strong>agentes de IA a medida</strong> según las necesidades,
+            objetivos y procesos de cada cliente. Los conecto con aplicaciones,
+            APIs y bases de datos SQL para hacer útil la información y reducir
+            tareas manuales.
           </p>
           <p>
-            Mi formación en redes y seguridad me permite comprender cada
-            solución desde los datos, el software y la infraestructura que la
-            sostiene.
+            Mi formación en redes y ciberseguridad orienta el{' '}
+            <strong>manejo responsable, la protección y el cuidado de la
+            información</strong>{' '}
+            en cada solución.
           </p>
           <a href="#experiencia" className="text-link accent-link">
             Explora mi trayectoria <ArrowUpRight size={17} />

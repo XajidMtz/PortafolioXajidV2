@@ -3,9 +3,12 @@ export const profile = {
   shortName: 'Xajid Martínez',
   role: 'Ingeniero en Redes y Ciberseguridad',
   age: 25,
-  email: 'Xajidmartinez@gmail.com',
+  email: 'xajidcash@gmail.com',
+  phone: '+52 55 6068 7436',
+  phoneHref: 'tel:+525560687436',
+  whatsappUrl: 'https://wa.me/5215560687436',
   github: 'https://github.com/XajidMtz',
-  linkedin: '', // Agrega aquí tu URL completa de LinkedIn.
+  linkedin: 'https://www.linkedin.com/in/ingxajidmartinez/',
   location: 'Ciudad de México, México',
   shortLocation: 'CDMX, México',
   availability: ['Remoto', 'Híbrido', 'Presencial'],
@@ -14,17 +17,18 @@ export const profile = {
     { name: 'Inglés', level: 'B1 · Intermedio' },
   ],
   resumeUrl: '/CV_Xajid_Martinez.pdf',
+  resumeUrlEn: '/CV_Xajid_Martinez_EN.pdf',
   profileImage: '/profile.jpg',
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL ||
     'https://xajid-martinez.sao-insurtec-7461.chatgpt.site',
   headline:
-    'Transformo datos, software e Inteligencia Artificial en soluciones eficientes, automatizadas y seguras.',
+    'Creo agentes de IA a medida, convierto datos en decisiones y cuido la información que hace posible cada solución.',
   focusAreas: [
-    'Data Analyst',
-    'Software Developer',
-    'AI Automation',
-    'Cybersecurity',
+    'Analista de datos',
+    'Agentes de IA a medida',
+    'Protección de información',
+    'Desarrollo de software',
   ],
 } as const;
 

@@ -4,18 +4,28 @@ import { profile } from '@/data/profile';
 export function ResumeLink({
   available,
   className = 'button button-secondary',
+  language = 'es',
+  label,
 }: {
   available: boolean;
   className?: string;
+  language?: 'es' | 'en';
+  label?: string;
 }) {
+  const isEnglish = language === 'en';
+  const url = isEnglish ? profile.resumeUrlEn : profile.resumeUrl;
+  const filename = isEnglish
+    ? 'CV_Xajid_Martinez_EN.pdf'
+    : 'CV_Xajid_Martinez.pdf';
+  const text = label ?? (isEnglish ? 'Descargar CV en inglés' : 'Descargar CV');
   return available ? (
     <a
       className={className}
-      href={profile.resumeUrl}
-      download="CV_Xajid_Martinez.pdf"
+      href={url}
+      download={filename}
     >
       <Download size={17} />
-      Descargar CV
+      {text}
     </a>
   ) : (
     <span className="resume-pending">
@@ -23,10 +33,10 @@ export function ResumeLink({
         type="button"
         className={className}
         disabled
-        title="CV próximamente"
+        title={isEnglish ? 'CV en inglés próximamente' : 'CV próximamente'}
       >
         <Download size={17} />
-        Descargar CV
+        {text}
       </button>
       <span className="resume-note">Próximamente</span>
     </span>
