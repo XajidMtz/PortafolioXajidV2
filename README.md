@@ -72,7 +72,7 @@ Si el navegador ofrece WebMCP, `filter_portfolio_projects` controla el mismo fil
 
 Ejecuta `npm run build` y despliega **el contenido de `out/`** en un hosting estático. También puedes desplegar el repositorio en proveedores compatibles con Next.js. `.openai/hosting.json` identifica el sitio de Sites y el directorio de salida.
 
-**Cloudflare Workers:** el proyecto `portafolioxajidv2` usa `wrangler.jsonc` para servir la exportación estática de `out/`. En Build configura `npm run build` y en Deploy `npx wrangler deploy`. No uses el adaptador OpenNext para esta exportación estática. Después del primer despliegue, configura `NEXT_PUBLIC_SITE_URL` con la URL pública real del Worker y vuelve a desplegar para actualizar canonical, OpenGraph y sitemap.
+**Cloudflare Workers:** el proyecto `portafolioxajidv2` usa `wrangler.jsonc` para servir la exportación estática de `out/`. En Build configura `npm run build` y en Deploy `npx wrangler deploy`. No uses el adaptador OpenNext para esta exportación estática. La URL pública predeterminada es `https://portafolioxajidv2.al222210593.workers.dev`. Si añades un dominio propio, configura `NEXT_PUBLIC_SITE_URL` con ese nuevo origen y vuelve a desplegar para actualizar canonical, OpenGraph y sitemap.
 
 Para comprobar localmente la misma versión que vas a desplegar:
 
@@ -84,9 +84,9 @@ node scripts/verify.mjs
 npm start
 ```
 
-La publicación de Sites de esta entrega es privada, accesible al propietario; no es todavía un enlace público para recruiters. Para distribuir el portafolio, publica el contenido de `out/` con acceso público en tu hosting elegido y configura su URL en `NEXT_PUBLIC_SITE_URL` antes del build.
+La versión de Sites sigue siendo privada. El portafolio público está disponible en [Cloudflare Workers](https://portafolioxajidv2.al222210593.workers.dev).
 
-El [repositorio público en GitHub](https://github.com/XajidMtz/PortafolioXajidV2) contiene el código y los CV, pero no sirve el sitio web por sí solo. Para abrir el portafolio como página, despliega `out/` en un servicio de hosting estático.
+El [repositorio público en GitHub](https://github.com/XajidMtz/PortafolioXajidV2) contiene el código y los CV. Cada cambio en `main` activa un nuevo build de Cloudflare Workers.
 
 Después de modificar contenido, fotografía, CV o dominio, genera y despliega un nuevo build. El contacto abre el cliente de correo mediante `mailto:`.
 

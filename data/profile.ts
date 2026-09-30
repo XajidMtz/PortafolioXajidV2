@@ -21,7 +21,7 @@ export const profile = {
   profileImage: '/profile.jpg',
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL ||
-    'https://xajid-martinez.sao-insurtec-7461.chatgpt.site',
+    'https://portafolioxajidv2.al222210593.workers.dev',
   headline:
     'Creo agentes de IA a medida, convierto datos en decisiones y cuido la información que hace posible cada solución.',
   focusAreas: [
