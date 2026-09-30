@@ -72,6 +72,8 @@ Si el navegador ofrece WebMCP, `filter_portfolio_projects` controla el mismo fil
 
 Ejecuta `npm run build` y despliega **el contenido de `out/`** en un hosting estático. También puedes desplegar el repositorio en proveedores compatibles con Next.js. `.openai/hosting.json` identifica el sitio de Sites y el directorio de salida.
 
+**Cloudflare Workers:** el proyecto `portafolioxajidv2` usa `wrangler.jsonc` para servir la exportación estática de `out/`. En Build configura `npm run build` y en Deploy `npx wrangler deploy`. No uses el adaptador OpenNext para esta exportación estática. Después del primer despliegue, configura `NEXT_PUBLIC_SITE_URL` con la URL pública real del Worker y vuelve a desplegar para actualizar canonical, OpenGraph y sitemap.
+
 Para comprobar localmente la misma versión que vas a desplegar:
 
 ```powershell
