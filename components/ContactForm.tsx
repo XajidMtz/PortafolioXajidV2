@@ -6,8 +6,7 @@ import { profile } from '@/data/profile';
 
 const recipient = profile.email;
 const subject = 'CORREO PORTAFOLIO';
-const formUrl = `https://formsubmit.co/${recipient}`;
-const ajaxUrl = `https://formsubmit.co/ajax/${recipient}`;
+const formUrl = `https://shipmyform.com/to/${recipient}`;
 
 type SubmissionState = 'idle' | 'sending' | 'success' | 'error';
 
@@ -25,21 +24,17 @@ export function ContactForm() {
 
     setState('sending');
     try {
-      const response = await fetch(ajaxUrl, {
+      const response = await fetch(formUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
           Accept: 'application/json',
         },
-        body: JSON.stringify(Object.fromEntries(fields)),
+        body: fields,
         signal: controller.signal,
       });
-      const result: { success?: boolean | string } = await response.json();
+      const result: { ok?: boolean } = await response.json();
 
-      if (
-        !response.ok ||
-        (result.success !== true && result.success !== 'true')
-      ) {
+      if (!response.ok || result.ok !== true) {
         throw new Error('El servicio de correo rechazó el mensaje.');
       }
 
@@ -76,17 +71,11 @@ export function ContactForm() {
       </div>
 
       <input type="hidden" name="_subject" value={subject} />
-      <input type="hidden" name="_template" value="table" />
-      <input
-        type="hidden"
-        name="_url"
-        value={`${profile.siteUrl}/#contacto`}
-      />
       <div className="contact-form-honeypot" aria-hidden="true">
         <label htmlFor="contact-company">Deja este campo vacío</label>
         <input
           id="contact-company"
-          name="_honey"
+          name="_gotcha"
           type="text"
           tabIndex={-1}
           autoComplete="off"
@@ -164,7 +153,7 @@ export function ContactForm() {
         )}
       </p>
       <p className="contact-form-privacy">
-        El envío se procesa mediante FormSubmit para entregarlo a mi correo.
+        El envío se procesa mediante ShipMyForm para entregarlo a mi correo.
       </p>
     </form>
   );
