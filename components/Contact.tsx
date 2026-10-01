@@ -1,8 +1,16 @@
-import { ArrowUpRight, Globe2, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import {
+  ArrowUpRight,
+  Globe2,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+} from 'lucide-react';
 import { profile } from '@/data/profile';
 import type { LocalAssets } from '@/lib/assets';
 import { ResumeLink } from './ResumeLink';
 import { SocialLinks } from './SocialLinks';
+import { ContactForm } from './ContactForm';
 export function Contact({ assets }: { assets: LocalAssets }) {
   return (
     <section id="contacto" className="contact-section">
@@ -34,10 +42,7 @@ export function Contact({ assets }: { assets: LocalAssets }) {
               {profile.phone}
             </a>
             <div className="contact-actions">
-              <a
-                className="button button-primary"
-                href={`mailto:${profile.email}`}
-              >
+              <a className="button button-primary" href="#contact-form">
                 <Mail size={17} />
                 Enviar correo
               </a>
@@ -61,30 +66,34 @@ export function Contact({ assets }: { assets: LocalAssets }) {
                 </a>
               )}
             </div>
+            <aside className="availability-card">
+              <span className="mono-label">CONECTEMOS</span>
+              <h3>{profile.shortName}</h3>
+              <p className="availability-location">
+                <MapPin size={17} />
+                {profile.location}
+              </p>
+              <div className="availability-modes">
+                {profile.availability.map((mode) => (
+                  <span key={mode}>{mode}</span>
+                ))}
+              </div>
+              <p>Interés principal en CDMX y zona metropolitana.</p>
+              <p className="open-location">
+                <Globe2 size={18} />
+                Abierto a oportunidades fuera de CDMX.
+              </p>
+              <div className="contact-socials">
+                <SocialLinks labels />
+              </div>
+            </aside>
           </div>
-          <aside className="availability-card">
-            <span className="mono-label">CONECTEMOS</span>
-            <h3>{profile.shortName}</h3>
-            <p className="availability-location">
-              <MapPin size={17} />
-              {profile.location}
-            </p>
-            <div className="availability-modes">
-              {profile.availability.map((mode) => (
-                <span key={mode}>{mode}</span>
-              ))}
-            </div>
-            <p>Interés principal en CDMX y zona metropolitana.</p>
-            <p className="open-location">
-              <Globe2 size={18} />
-              Abierto a oportunidades fuera de CDMX.
-            </p>
-            <div className="contact-socials">
-              <SocialLinks labels />
-            </div>
-          </aside>
+          <ContactForm />
         </div>
-        <div className="resume-downloads" aria-labelledby="resume-downloads-title">
+        <div
+          className="resume-downloads"
+          aria-labelledby="resume-downloads-title"
+        >
           <div>
             <span className="mono-label">CURRÍCULUM</span>
             <h3 id="resume-downloads-title">Descarga mi CV</h3>

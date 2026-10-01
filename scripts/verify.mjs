@@ -44,10 +44,20 @@ assert.ok(existsSync(path.join(output, 'CV_Xajid_Martinez_EN.pdf')));
 assert.ok(existsSync(path.join(output, 'robots.txt')));
 assert.ok(existsSync(path.join(output, 'sitemap.xml')));
 assert.match(html, /href="mailto:[^"\s]+@[^"\s]+"/);
-assert.match(html, /href="https:\/\/www\.linkedin\.com\/in\/ingxajidmartinez\/"/);
+assert.match(
+  html,
+  /href="https:\/\/www\.linkedin\.com\/in\/ingxajidmartinez\/"/,
+);
 assert.match(html, /href="tel:\+525560687436"/);
 assert.match(html, /href="https:\/\/wa\.me\/5215560687436"/);
-assert.match(html, /href="\/CV_Xajid_Martinez_EN\.pdf" download="CV_Xajid_Martinez_EN\.pdf"/);
+assert.match(html, /action="https:\/\/formsubmit\.co\/xajidcash@gmail\.com"/);
+assert.match(html, /name="_subject"[^>]*value="CORREO PORTAFOLIO"/);
+assert.match(html, /id="contact-email"[^>]*type="email"[^>]*name="email"/);
+assert.match(html, /href="#contact-form"/);
+assert.match(
+  html,
+  /href="\/CV_Xajid_Martinez_EN\.pdf" download="CV_Xajid_Martinez_EN\.pdf"/,
+);
 assert.ok(
   !html.includes('DOCUMENTO TEMPORAL DE PRUEBA'),
   'No publicar fixtures.',
